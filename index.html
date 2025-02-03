@@ -2,61 +2,16 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Walentynka</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #message {
-      font-size: 48px;
-      color: red;
-      margin-top: 20px;
-      display: none;
-    }
-    /* Styl dla przycisku "Nie", aby mógł się przemieszczać */
-    #noButton {
-      position: absolute;
-      /* Początkowa pozycja przycisku "Nie" */
-      left: 50%;
-      top: 60%;
-      transform: translate(-50%, -50%);
-    }
-    /* Przycisk "Tak" pozostaje w normalnym przepływie dokumentu */
-    #yesButton {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 18px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kocham Cię <3</title>
 </head>
 <body>
-  <h1>Zostaniesz moją walentynką?</h1>
-  <button id="yesButton">Tak</button>
-  <button id="noButton">Nie</button>
-  
-  <div id="message">JEJ</div>
-  
-  <script>
-    // Funkcja wyświetlająca napis "JEJ" po kliknięciu przycisku "Tak"
-    document.getElementById('yesButton').addEventListener('click', function() {
-      document.getElementById('message').style.display = 'block';
-    });
-
-    // Funkcja przesuwająca przycisk "Nie" w losowe miejsce, gdy użytkownik najedzie kursorem
-    const noButton = document.getElementById('noButton');
-    noButton.addEventListener('mouseover', function() {
-      // Oblicz losowe pozycje w obrębie okna przeglądarki
-      const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-      const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-      
-      noButton.style.left = x + 'px';
-      noButton.style.top = y + 'px';
-    });
-  </script>
+  <section class="pytanie">
+    <h1>Zostaniesz moją walentynką?</h1>
+  </section>
+  <section class="przyciski">
+    <button class="tak">Tak!</button>
+    <button class="nie">Nie...</button>
+  </section>
 </body>
 </html>
